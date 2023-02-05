@@ -12,22 +12,28 @@ export default function LoanAmount() {
   const loanAmount = useSelector(
     (state: RootState) => state.formValues.loanAmount
   );
+  const loanType = useSelector((state: RootState) => state.formValues.loanType);
 
   const dispatch = useDispatch();
 
   return (
-    <Input>
-      <InputTitle>თანხა</InputTitle>
-      <input
-        onChange={() => {
-          dispatch(setLoanAmount(loanAmountRef.current?.valueAsNumber));
-        }}
-        type="number"
-        style={{ outline: "none", border: "none", width: 360 }}
-        defaultValue={loanAmount}
-        value={loanAmount}
-        ref={loanAmountRef}
-      />
-    </Input>
+    <>
+      <Input>
+        <InputTitle>თანხა</InputTitle>
+        <input
+          onChange={() => {
+            dispatch(setLoanAmount(loanAmountRef.current?.valueAsNumber));
+          }}
+          type="number"
+          style={{ outline: "none", border: "none", width: 360 }}
+          defaultValue={loanAmount}
+          value={loanAmount}
+          ref={loanAmountRef}
+        />
+      </Input>
+      <InputTitle>{`მინიმალური თანხა ${
+        loanType == "იპოთეკური სესხი" ? "3000" : "400"
+      } ლარი`}</InputTitle>
+    </>
   );
 }
