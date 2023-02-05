@@ -1,13 +1,9 @@
-import LoanType from "./components/form/loan_type/LoanType";
-import LoanAmount from "./components/form/loan_amount/LoanAmount";
-import LoanLength from "./components/form/loan_length/LoanLength";
+import Form from "./components/form/Form";
 
 function App() {
   return (
     <div>
-      <LoanType />
-      <LoanAmount />
-      <LoanLength />
+      <Form />
     </div>
   );
 }
