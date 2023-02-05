@@ -12,6 +12,7 @@ export default function LoanAmount() {
   const loanAmount = useSelector(
     (state: RootState) => state.formValues.loanAmount
   );
+
   const dispatch = useDispatch();
 
   return (
@@ -23,7 +24,8 @@ export default function LoanAmount() {
         }}
         type="number"
         style={{ outline: "none", border: "none", width: 360 }}
-        defaultValue={5000}
+        defaultValue={loanAmount}
+        value={loanAmount}
         ref={loanAmountRef}
       />
     </Input>

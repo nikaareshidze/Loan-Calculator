@@ -1,12 +1,32 @@
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../../store/store";
+import {
+  setLoanType,
+  setLoanLength,
+  setLoanAmount,
+} from "../../../store/formValuesSlice";
 
 import Input from "../../Input";
 import InputTitle from "../../InputTitle";
 import InputDescription from "../../InputDescription";
 
 export default function LoanType() {
-  const loanTypeArr = ["იპოთეკური სესხი", "სამომხმარებლო სესხი"];
-  const [loanType, setLoanType] = useState(loanTypeArr[0]);
+  const loanTypeArr = useSelector(
+    (state: RootState) => state.formValues.loanTypeArr
+  );
+  const loanType = useSelector((state: RootState) => state.formValues.loanType);
+  const loanLengthForReset = useSelector(
+    (state: RootState) => state.formValues.loanLengthForReset
+  );
+  const loanAmountForReset = useSelector(
+    (state: RootState) => state.formValues.loanAmountForReset
+  );
+
+  const dispatch = useDispatch();
+
+  //const loanTypeArr = ["იპოთეკური სესხი", "სამომხმარებლო სესხი"];
+  //const [loanType, setLoanType] = useState(loanTypeArr[0]);
   const [optionIsShown, setOptionIsShown] = useState(false);
 
   return (
@@ -32,9 +52,12 @@ export default function LoanType() {
           }}
           onClick={() => {
             loanType == loanTypeArr[0]
-              ? setLoanType(loanTypeArr[1])
-              : setLoanType(loanTypeArr[0]);
+              ? dispatch(setLoanType(loanTypeArr[1]))
+              : dispatch(setLoanType(loanTypeArr[0]));
+
             setOptionIsShown(!optionIsShown);
+            dispatch(setLoanLength(loanLengthForReset));
+            dispatch(setLoanAmount(loanAmountForReset));
           }}
         >
           <h1 style={{ fontSize: 14, fontWeight: 400 }}>

@@ -9,6 +9,10 @@ function Form() {
   const loanAmount = useSelector(
     (state: RootState) => state.formValues.loanAmount
   );
+  const loanLength = useSelector(
+    (state: RootState) => state.formValues.loanLength
+  );
+  const loanType = useSelector((state: RootState) => state.formValues.loanType);
 
   return (
     <div>
@@ -17,7 +21,7 @@ function Form() {
       <LoanLength />
       <button
         onClick={() => {
-          console.log(loanAmount);
+          console.log(loanAmount, loanLength, loanType);
         }}
       >
         გამოთვალე
