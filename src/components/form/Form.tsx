@@ -19,13 +19,6 @@ function Form() {
       <LoanType />
       <LoanAmount />
       <LoanLength />
-      <button
-        onClick={() => {
-          console.log(loanAmount, loanLength, loanType);
-        }}
-      >
-        გამოთვალე
-      </button>
     </div>
   );
 }
