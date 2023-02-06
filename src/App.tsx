@@ -2,12 +2,17 @@ import Form from "./components/form/Form";
 import Result from "./components/result/Result";
 import Container from "./components/Container";
 
+import GlobalStyle from "./GlobalStyle";
+
 function App() {
   return (
-    <Container>
-      <Form />
-      <Result />
-    </Container>
+    <>
+      <GlobalStyle />
+      <Container>
+        <Form />
+        <Result />
+      </Container>
+    </>
   );
 }
 

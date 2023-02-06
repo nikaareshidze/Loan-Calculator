@@ -4,6 +4,8 @@ const Wrapper = styled.div`
   background-color: #f4f4f4;
   width: 576px;
   height: 430px;
+
+  align-self: center;
 `;
 
 export default Wrapper;

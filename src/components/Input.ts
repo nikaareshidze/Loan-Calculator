@@ -12,6 +12,9 @@ const Input = styled.div`
   cursor: pointer;
 
   margin-top: 8px;
+  margin-bottom: 10;
+
+  background-color: white;
 `;
 
 export default Input;

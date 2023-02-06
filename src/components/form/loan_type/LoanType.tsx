@@ -43,12 +43,16 @@ export default function LoanType() {
         <div
           style={{
             width: 408,
-            height: 64,
+            height: 56,
             borderStyle: "solid",
             borderWidth: 1,
             borderColor: "#d5d5d5",
             borderRadius: 8,
             cursor: "pointer",
+            backgroundColor: "white",
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: 8,
           }}
           onClick={() => {
             loanType == loanTypeArr[0]
@@ -60,7 +64,9 @@ export default function LoanType() {
             dispatch(setLoanAmount(loanAmountForReset));
           }}
         >
-          <h1 style={{ fontSize: 14, fontWeight: 400 }}>
+          <h1
+            style={{ fontSize: 14, fontWeight: 400, backgroundColor: "white" }}
+          >
             {loanType == loanTypeArr[0] ? loanTypeArr[1] : loanTypeArr[0]}
           </h1>
         </div>

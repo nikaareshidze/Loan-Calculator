@@ -25,7 +25,13 @@ export default function LoanAmount() {
             dispatch(setLoanAmount(loanAmountRef.current?.valueAsNumber));
           }}
           type="number"
-          style={{ outline: "none", border: "none", width: 360 }}
+          style={{
+            outline: "none",
+            border: "none",
+            width: 360,
+            backgroundColor: "white",
+            paddingLeft: 8,
+          }}
           defaultValue={loanAmount}
           value={loanAmount}
           ref={loanAmountRef}

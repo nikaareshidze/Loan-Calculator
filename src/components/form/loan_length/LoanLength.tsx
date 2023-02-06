@@ -42,7 +42,7 @@ export default function LoanLength() {
         <InputDescription>{`${loanLength} ${yearOrMonth}`}</InputDescription>
       </Input>
       {optionIsShown && (
-        <>
+        <div>
           {optionsArr.map((item) => (
             <OptionDiv
               onClick={() => {
@@ -53,7 +53,7 @@ export default function LoanLength() {
               <InputDescription>{`${item} ${yearOrMonth}`}</InputDescription>
             </OptionDiv>
           ))}
-        </>
+        </div>
       )}
     </>
   );
