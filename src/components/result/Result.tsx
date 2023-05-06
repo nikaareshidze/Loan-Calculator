@@ -1,7 +1,7 @@
-import Wrapper from "./Wrapper";
-import ResultTitle from "./ResultTitle";
-import ResultProperties from "./ResultProperties";
-import ResultDescription from "./ResultDescription";
+import Wrapper from "../../styles/Wrapper";
+import ResultTitle from "../../styles/ResultTitle";
+import ResultProperties from "../../styles/ResultProperties";
+import ResultDescription from "../../styles/ResultDescription";
 
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";

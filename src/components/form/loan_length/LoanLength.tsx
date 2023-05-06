@@ -3,10 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../store/store";
 import { setLoanLength } from "../../../store/formValuesSlice";
 
-import Input from "../../Input";
-import InputTitle from "../../InputTitle";
-import InputDescription from "../../InputDescription";
-import OptionDiv from "./OptionDiv";
+import Input from "../../../styles/Input";
+import InputTitle from "../../../styles/InputTitle";
+import InputDescription from "../../../styles/InputDescription";
+import OptionDiv from "../../../styles/OptionDiv";
 
 export default function LoanLength() {
   const loanLengthArr = useSelector(
@@ -32,7 +32,7 @@ export default function LoanLength() {
   const yearOrMonth = loanType == "იპოთეკური სესხი" ? "წელი" : "თვე";
 
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <Input
         onClick={() => {
           setOptionIsShown(!optionIsShown);
@@ -55,6 +55,6 @@ export default function LoanLength() {
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }

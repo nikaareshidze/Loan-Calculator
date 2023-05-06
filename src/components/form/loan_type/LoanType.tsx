@@ -6,10 +6,9 @@ import {
   setLoanLength,
   setLoanAmount,
 } from "../../../store/formValuesSlice";
-
-import Input from "../../Input";
-import InputTitle from "../../InputTitle";
-import InputDescription from "../../InputDescription";
+import Input from "../../../styles/Input";
+import InputTitle from "../../../styles/InputTitle";
+import InputDescription from "../../../styles/InputDescription";
 
 export default function LoanType() {
   const loanTypeArr = useSelector(
@@ -30,7 +29,7 @@ export default function LoanType() {
   const [optionIsShown, setOptionIsShown] = useState(false);
 
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <Input
         onClick={() => {
           setOptionIsShown(!optionIsShown);
@@ -46,13 +45,14 @@ export default function LoanType() {
             height: 56,
             borderStyle: "solid",
             borderWidth: 1,
-            borderColor: "#d5d5d5",
+            borderColor: "white",
             borderRadius: 8,
             cursor: "pointer",
-            backgroundColor: "white",
+            backgroundColor: "#050604",
             display: "flex",
             alignItems: "center",
             paddingLeft: 8,
+            color: "white",
           }}
           onClick={() => {
             loanType == loanTypeArr[0]
@@ -65,12 +65,16 @@ export default function LoanType() {
           }}
         >
           <h1
-            style={{ fontSize: 14, fontWeight: 400, backgroundColor: "white" }}
+            style={{
+              fontSize: 14,
+              fontWeight: 400,
+              backgroundColor: "#050604",
+            }}
           >
             {loanType == loanTypeArr[0] ? loanTypeArr[1] : loanTypeArr[0]}
           </h1>
         </div>
       )}
-    </>
+    </div>
   );
 }

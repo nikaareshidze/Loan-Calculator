@@ -6,7 +6,7 @@ const Input = styled.div`
 
   border-style: solid;
   border-width: 1px;
-  border-color: #d5d5d5;
+  border-color: white;
   border-radius: 8px;
 
   cursor: pointer;
@@ -14,7 +14,7 @@ const Input = styled.div`
   margin-top: 8px;
   margin-bottom: 10;
 
-  background-color: white;
+  background-color: #050604;
 `;
 
 export default Input;

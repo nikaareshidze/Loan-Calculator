@@ -15,7 +15,13 @@ function Form() {
   const loanType = useSelector((state: RootState) => state.formValues.loanType);
 
   return (
-    <div style={{ backgroundColor: "white", paddingTop: 27 }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        backgroundColor: "#050604",
+      }}
+    >
       <LoanType />
       <LoanAmount />
       <LoanLength />
