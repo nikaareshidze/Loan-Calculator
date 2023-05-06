@@ -7,9 +7,9 @@ import {
   setLoanAmount,
 } from "../../../store/formValuesSlice";
 
-import Input from "../../Input";
-import InputTitle from "../../InputTitle";
-import InputDescription from "../../InputDescription";
+import Input from "../../../styles/Input";
+import InputTitle from "../../../styles/InputTitle";
+import InputDescription from "../../../styles/InputDescription";
 
 export default function LoanType() {
   const loanTypeArr = useSelector(

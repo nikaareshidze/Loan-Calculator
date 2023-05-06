@@ -3,10 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../store/store";
 import { setLoanLength } from "../../../store/formValuesSlice";
 
-import Input from "../../Input";
-import InputTitle from "../../InputTitle";
-import InputDescription from "../../InputDescription";
-import OptionDiv from "./OptionDiv";
+import Input from "../../../styles/Input";
+import InputTitle from "../../../styles/InputTitle";
+import InputDescription from "../../../styles/InputDescription";
+import OptionDiv from "../../../styles/OptionDiv";
 
 export default function LoanLength() {
   const loanLengthArr = useSelector(

@@ -1,5 +1,5 @@
-import Input from "../../Input";
-import InputTitle from "../../InputTitle";
+import Input from "../../../styles/Input";
+import InputTitle from "../../../styles/InputTitle";
 
 import { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";

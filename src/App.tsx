@@ -1,6 +1,6 @@
 import Form from "./components/form/Form";
 import Result from "./components/result/Result";
-import Container from "./components/Container";
+import Container from "./styles/Container";
 
 import GlobalStyle from "./GlobalStyle";
 
