@@ -16,13 +16,13 @@ export default function LoanDescription() {
       }}
     >
       {loanProperty == "Basic"
-        ? `Hi Basic. This means that loan amount is 50000 & loan length is 5`
+        ? `Basic means that loan amount is 50000$ & loan length is 5 years`
         : loanProperty == "Startup"
-        ? "Hi Startup. This means that loan amount is 500000 & loan length is 10"
+        ? "Startup means that loan amount is 500000$ & loan length is 10 years"
         : loanProperty == "Premium"
-        ? "Hi Premium. This means that loan amount is 1000000 & loan length is 15"
+        ? "Premium means that loan amount is 1000000$ & loan length is 15 years"
         : loanProperty == "Pro"
-        ? "Hi Pro. This means that loan amount is 20000000 & loan length is 20"
+        ? "Pro means that loan amount is 20000000$ & loan length is 20 years"
         : ""}
     </div>
   );

@@ -53,24 +53,22 @@ export default function LoanDetails() {
           fontWeight: "normal",
           display: "flex",
           flexDirection: "column",
-          gap: "16px",
+          gap: "24px",
           marginTop: "36px",
         }}
       >
         <p>
-          annual interest
-          <span style={{ marginLeft: "8px" }}>
-            {loanType == "Mortgage Loan" ? "from 11%" : "from 9%"}
-          </span>
+          {`Annual interest `}
+          <span>{loanType == "Mortgage Loan" ? "from 11%" : "from 9%"}</span>
         </p>
         <p>
-          effective interest
-          <span style={{ marginLeft: "8px" }}>
+          {`Effective interest `}
+          <span>
             {loanType == "Mortgage Loan" ? "from 14.85%" : "from 18.5%"}
           </span>
         </p>
-        <p>loan amount: {loanAmount}</p>
-        <p>loan length: {loanLength}</p>
+        <p>Loan amount: {loanAmount}</p>
+        <p>Loan length: {loanLength}</p>
       </div>
     </div>
   );
