@@ -6,15 +6,16 @@ const OptionDiv = styled.div`
 
   border-style: solid;
   border-width: 1px;
-  border-color: #d5d5d5;
-  background-color: white;
+  border-color: white;
+  background-color: #050604;
 
   display: flex;
   align-items: center;
+  cursor: pointer;
 
-  &:hover {
+  /* &:hover {
     background-color: #f4f4f4;
-  }
+  } */
 `;
 
 export default OptionDiv;

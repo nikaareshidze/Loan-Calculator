@@ -32,7 +32,7 @@ export default function LoanLength() {
   const yearOrMonth = loanType == "იპოთეკური სესხი" ? "წელი" : "თვე";
 
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <Input
         onClick={() => {
           setOptionIsShown(!optionIsShown);
@@ -55,6 +55,6 @@ export default function LoanLength() {
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }
