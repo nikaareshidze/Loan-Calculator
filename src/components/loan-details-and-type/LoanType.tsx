@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { setLoanType } from "../../../store/formValuesSlice";
+import { setLoanType } from "../../store/formValuesSlice";
 
 export default function LoanType() {
   const dispatch = useDispatch();

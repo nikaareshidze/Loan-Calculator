@@ -3,7 +3,7 @@ import {
   setLoanProperty,
   setLoanAmount,
   setLoanLength,
-} from "../../../store/formValuesSlice";
+} from "../../store/formValuesSlice";
 
 export default function LoanType() {
   const dispatch = useDispatch();

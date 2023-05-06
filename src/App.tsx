@@ -5,7 +5,7 @@ import {
   LoanDetails,
   LoanProperties,
   LoanType,
-} from "./components/new";
+} from "./components";
 
 function App() {
   return (
